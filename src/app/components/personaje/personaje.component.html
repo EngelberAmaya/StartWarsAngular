@@ -1,0 +1,26 @@
+<h2>Detalle Personaje</h2>
+
+<div *ngIf="spiner" class="d-flex justify-content-center">
+    <div class="spinner-border" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+</div>
+
+<div *ngIf="!spiner" class="card text-center">
+    <div class="card-header">
+        <strong>{{people?.name}}</strong>        
+    </div>
+    <div class="card-body">
+        <h5 class="card-title"> Genero: {{people?.gender}}</h5>
+        <p class="card-text">Color ojo : {{people?.eye_color}}</p>
+        <p class="card-text">Color de pelo : {{people?.hair_color}}</p>
+        <p class="card-text">Altura : {{people?.height}}cm</p>
+        <p class="card-text">Color de piel : {{people?.skin_color}}</p>
+        <p class="card-text">Año de nacimiento : {{people?.birth_year}}</p>
+    </div>
+    <div class="card-footer text-muted">
+        <a routerLink="/home" class="btn btn-primary">Volver</a>
+    </div>
+</div>
+
+
